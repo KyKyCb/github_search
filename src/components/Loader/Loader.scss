@@ -1,0 +1,27 @@
+.waiting__loader__container{
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+    
+    margin-top: 20px;
+}
+
+.waiting__loader{
+    width: 80px;
+    height: 80px;
+
+    border-radius: 60%;
+    border-top: 10px solid #e3d7f1;
+    border-right: 10px solid #e3d7f1;
+    border-bottom: 10px solid #e3d7f1;
+    border-left: 10px solid #d6bcf5;
+
+    animation: loader 0.7s linear infinite;
+}
+
+@keyframes loader {
+    100%{
+        transform: rotate(360deg)
+    }
+}
