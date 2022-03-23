@@ -1,0 +1,36 @@
+.user {
+    margin: 0 auto;
+    max-width: 1000px;
+    width: 100%;
+    &__info {
+        margin: 0 auto;
+        max-width: 800px;
+        width: 100%;
+        &_two-columns {
+            display: flex;
+            justify-content: space-between;
+        }
+        &__img {
+            img {
+                width: 300px;
+                height: 300px;
+                border-radius: 10px;
+                object-fit: contain;
+            }
+        }
+    }
+    &__text {
+        font-family: sans-serif;
+        &_filled{
+            font-weight: bold;
+        }
+        &_not-filled{
+            color: rgba(124, 124, 124, 0.8);
+        }
+    }
+    &__bio{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

@@ -8,16 +8,16 @@
 }
 
 .waiting__loader{
-    width: 80px;
-    height: 80px;
+    width: 40px;
+    height: 40px;
 
-    border-radius: 60%;
-    border-top: 10px solid #e3d7f1;
-    border-right: 10px solid #e3d7f1;
-    border-bottom: 10px solid #e3d7f1;
-    border-left: 10px solid #d6bcf5;
+    border-radius: 50%;
+    border-top: 6px solid #c9d9ff;
+    border-right: 6px solid #c9d9ff;
+    border-bottom: 6px solid #c9d9ff;
+    border-left: 6px solid #87a8f5;
 
-    animation: loader 0.7s linear infinite;
+    animation: loader 0.3s linear infinite;
 }
 
 @keyframes loader {

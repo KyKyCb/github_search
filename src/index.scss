@@ -1,0 +1,118 @@
+*{
+    box-sizing: border-box;
+}
+.layout {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1440px;
+    &__title {
+        text-align: center;
+        font-family: sans-serif;
+        font-size: 40px;
+    }
+}
+input {
+    outline: none;
+    border: none;
+}
+
+.empty-list__message {
+    text-align: center;
+    font-family: sans-serif;
+}
+
+.error {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    &__heading {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        width: 100%;
+    }
+    &__title {
+        font-family: sans-serif;
+        font-size: 28px;
+        line-height: 35px;
+    }
+    &__close-icon {
+        cursor: pointer;
+    }
+    &__info {
+        height: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        font-family: sans-serif;
+        font-size: 20px;
+    }
+}
+
+.list {
+    display: block;
+    text-decoration: none;
+    color: #000;
+    box-shadow: 6px 6px 6px 3px #cad6f3;
+
+    background-color: #fff;
+
+    border-radius: 20px;
+
+    margin: 15px;
+
+    cursor: pointer;
+
+    &__item {
+        height: 154px;
+
+        display: flex;
+        justify-content: space-between;
+
+        border-radius: 20px;
+
+        padding: 0 40px;
+
+        transition: all 150ms ease-in-out;
+        &:hover {
+            background-color: #edf2ff;
+        }
+        &__img-container {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+
+            img {
+                width: 60px;
+                height: 60px;
+                border-radius: 10px;
+                object-fit: contain;
+            }
+        }
+        &__text-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
+        }
+        &_text-row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            width: 100%;
+        }
+    }
+    &__text {
+        &__name {
+            font-family: sans-serif;
+        }
+        font-family: sans-serif;
+    }
+}

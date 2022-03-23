@@ -3,13 +3,16 @@ import { useSelector } from "react-redux";
 import { selectUserLoading } from "../../redux/selectors/selectUserState";
 import Loader from "../Loader/Loader";
 
+import './InputComponent.scss'
+
 interface InputInterface {
     placeholder: string;
     searchFunction: (value: string) => void;
+    storeValue: string
 }
 
 const InputComponent: FC<InputInterface> = (props) => {
-    const [value, setValue] = useState<string>("");
+    const [value, setValue] = useState<string>(props.storeValue);
     const isLoading = useSelector(selectUserLoading);
 
     const onChangeHandler = (event: ChangeEvent<HTMLInputElement>) => {
@@ -31,6 +34,7 @@ const InputComponent: FC<InputInterface> = (props) => {
     return (
         <>
             <input
+                className="search__element"
                 name="github-search"
                 placeholder={props.placeholder}
                 onChange={onChangeHandler}

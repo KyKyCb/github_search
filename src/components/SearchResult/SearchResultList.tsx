@@ -12,7 +12,7 @@ function SearchResultList<T>(props: SearchResultListInterface<T>) {
     const isLoading = useSelector(selectUserLoading);
     return (
         <>
-            {props.items.length === 0 && !isLoading && <h1>List is empty</h1>}
+            {props.items.length === 0 && !isLoading && <h1 className="empty-list__message">List is empty</h1>}
             {props.items.map(props.renderItem)}
         </>
     );

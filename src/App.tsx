@@ -1,14 +1,19 @@
-import React from "react";
+import React, { FC, useEffect, useState } from "react";
 import { BrowserRouter } from "react-router-dom";
 import AppRouter from "./routes/AppRouter";
 import store from "./redux/store";
-import { Provider } from "react-redux";
+import { Provider, useSelector } from "react-redux";
+import Modal from "./components/Modal/Modal";
+import { selectUserError } from "./redux/selectors/selectUserState";
+import Layout from "./components/Layout/Layout";
 
-const App: React.FC = () => {
+const App: FC = () => {
     return (
         <Provider store={store}>
             <BrowserRouter>
-                <AppRouter />
+                <Layout>
+                    <AppRouter />
+                </Layout>
             </BrowserRouter>
         </Provider>
     );
