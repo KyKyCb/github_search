@@ -1,5 +1,5 @@
 import React, { FC, useEffect, useState } from "react";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, HashRouter } from "react-router-dom";
 import AppRouter from "./routes/AppRouter";
 import store from "./redux/store";
 import { Provider, useSelector } from "react-redux";
@@ -10,11 +10,11 @@ import Layout from "./components/Layout/Layout";
 const App: FC = () => {
     return (
         <Provider store={store}>
-            <BrowserRouter>
+            <HashRouter>
                 <Layout>
                     <AppRouter />
                 </Layout>
-            </BrowserRouter>
+            </HashRouter>
         </Provider>
     );
 };
